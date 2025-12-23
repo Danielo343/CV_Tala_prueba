@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/api/auth';
+const API_URL = 'https://cvtalaprueba-production.up.railway.app/api/auth';
 
 class AuthService {
   login(user) {
