@@ -17,7 +17,8 @@ app.use(express.json());
 const pool = new Pool({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
-  database: 'CV_Tala',
+  // 👇 Si existe la variable DB_NAME úsala, si no, usa 'CV_Tala' (para tu PC)
+  database: process.env.DB_NAME || 'CV_Tala', 
   password: process.env.DB_PASSWORD,
   port: parseInt(process.env.DB_PORT || '5432'),
 });
